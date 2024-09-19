@@ -1,0 +1,63 @@
+@startuml
+
+abstract class Carta {
+    - int valor
+    - String naipeCor
+    + int getValor()
+    + String getNaipe()
+}
+
+class CartaTradicional extends Carta {
+}
+
+class CartaUno extends Carta {
+    - String tipoEspecial
+}
+
+abstract class Baralho {
+    - List<Carta> cartas
+    + void embaralhar()
+    + void distribuirCartas()
+}
+
+class BaralhoTradicional extends Baralho {
+}
+
+class BaralhoUno extends Baralho {
+}
+
+interface BaralhoBuilder {
+    + void criarCartas()
+    + Baralho obterBaralho()
+}
+
+class BaralhoTradicionalBuilder implements BaralhoBuilder {
+    + void criarCartas()
+    + Baralho obterBaralho()
+}
+
+class BaralhoUnoBuilder implements BaralhoBuilder {
+    + void criarCartas()
+    + Baralho obterBaralho()
+}
+
+class BaralhoDirector {
+    - BaralhoBuilder builder
+    + void setBuilder(BaralhoBuilder builder)
+    + Baralho construirBaralho()
+}
+
+class BaralhoFactory {
+    + static Baralho createBaralho(String tipo)
+}
+
+Carta <|-- CartaTradicional
+Carta <|-- CartaUno
+Baralho <|-- BaralhoTradicional
+Baralho <|-- BaralhoUno
+BaralhoBuilder <|.. BaralhoTradicionalBuilder
+BaralhoBuilder <|.. BaralhoUnoBuilder
+BaralhoDirector o-- BaralhoBuilder
+BaralhoFactory ..> BaralhoDirector
+
+@enduml
