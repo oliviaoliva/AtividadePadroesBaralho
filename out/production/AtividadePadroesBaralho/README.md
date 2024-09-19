@@ -1,9 +1,9 @@
 <h1 align="center" style="font-weight: bold;">Deck Builder 🏗️🃏</h1>
 
 <p align="center"><i>Este projeto aborda a construção de diferentes tipos de baralhos de cartas usando os padrões de projeto Builder e Simple Factory. O objetivo é fornecer uma estrutura flexível para a criação de baralhos de cartas, permitindo a fácil extensão para jogos como Uno, Blackjack, Poker, entre outros.</i></p>
+<img alignitem="center" src="src/teste.png">
 
 ## 📖 Índice
-
 1. [✔️️ Objetivos](#-objetivos)
 3. [🚀 Execução e Utilização](#-execução-e-utilização)
 4. [🚧 Desafios e Dificuldades](#-desafios-e-dificuldades)
@@ -20,8 +20,26 @@
 
 ## 🚀 Execução e Utilização
 
+### Pré-requisitos
 
+Certifique-se de que os seguintes itens estão instalados em seu ambiente:
 
+- [Java JDK 11+](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+- [Maven](https://maven.apache.org/install.html) (opcional)
+- Um IDE de sua escolha (como [IntelliJ IDEA](https://www.jetbrains.com/idea/) ou [Eclipse](https://www.eclipse.org/ide/))
+
+### Como Executar
+
+1. **Clonar o Repositório**:
+
+   Clone o repositório para sua máquina local usando o Git:
+
+   ```bash
+   git clone https://github.com/usuario/repo-baralho.git
+   cd repo-baralho
+
+2. **Compilar o Projeto**
+3. **Execute a Classe Principal**
 ## 🚧 Desafios e Dificuldades
 
 1. Entender como aplicar o Builder dentro do problema de forma coerente
